@@ -4,7 +4,7 @@
 
 Nylas.config({
     clientId: "99ll6szal2clc37scmkxnuinb" ,
-    clientSecret: "" ,
+    clientSecret: "2wb5qxy4rwmvsocl329twjsks" ,
   });
   
   options = {
