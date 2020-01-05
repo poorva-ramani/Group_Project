@@ -1,0 +1,33 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80);
+}
+
+.title {
+  text-align: center;
+  font-family: "Fugaz One", cursive;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-left: 430px;
+  margin-right: 430px;
+
+  background-color: #9cc6cd;
+}
+
+.loginInfo {
+  font-family: "Fugaz One", cursive;
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+  
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
