@@ -5,10 +5,26 @@ CREATE DATABASE scheduler_db;
 
 USE scheduler_db;
 
-CREATE TABLE chirps(
- id INT(11) NOT NULL AUTO_INCREMENT,
- author VARCHAR(30)  NOT NULL,
- body VARCHAR(30)  NOT NULL,
- created_set TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
- PRIMARY KEY (id)
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(100) NOT NULL,
+  `last_name` VARCHAR(100) NOT NULL,
+  `mob_no` int(11) NOT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
 );
+
+
+-- scheduling/event details-
+-- User name - host name
+-- Phone,
+-- Location
+-- Time,
+-- Date
+-- TimeZone, 
+-- Event Name, 
+-- Event Descriptions
