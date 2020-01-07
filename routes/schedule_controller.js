@@ -1,21 +1,26 @@
-// // client id 99ll6szal2clc37scmkxnuinb
-// Nylas.config({
-//     clientId: "99ll6szal2clc37scmkxnuinb" ,
-//     clientSecret: "2wb5qxy4rwmvsocl329twjsks" ,
-//   });
+// client id 99ll6szal2clc37scmkxnuinb
+
+
+
+
+const Nylas = require('nylas');
+
+Nylas.config({
+    clientId: "99ll6szal2clc37scmkxnuinb" ,
+    clientSecret: "2wb5qxy4rwmvsocl329twjsks" ,
+  });
   
-//   options = {
-//     loginHint: 'test@nylas.com',
-//     redirectURI: 'https://localhost/callback',
-//     scopes: ['email.read_only', 'email.send'],
-//   };
-  
-//   // Redirect your user to the auth_url
-//   auth_url = Nylas.urlForAuthentication(options);
+ 
+  options = {
+    loginHint: 'jskye429@gmail.com',
+    redirectURI: 'https://localhost/callback',
+    scopes: ['email.read_only', 'email.send'],
+  };
 
 
+  auth_url = Nylas.urlForAuthentication(options);
 
-
+console.log("wassup",auth_url)
 
 
 
