@@ -1,0 +1,1 @@
+INSERT INTO `users`(`first_name`,`last_name`,`mob_no`,`user_name`, `password`) VALUES ("poorva","ramani","3122245222","poorvaramani", "abcd1234");

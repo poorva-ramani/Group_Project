@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,12 @@
   "homepage": "https://github.com/poorva-ramani/Group_Project2#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "body-parser": "^1.16.1",
+    "express-session": "^1.15.1",
+    "req-flash": "0.0.3",
     "mysql": "^2.17.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "express-handlebars": "^3.1.0"
   }
 }
