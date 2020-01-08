@@ -1,14 +1,14 @@
 module.exports = function (sequelize, DataTypes) {
 
   var Users = sequelize.define("users", {
-    first_name: {
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 255]
       }
     },
-    last_name: {
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -16,6 +16,13 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     mob_no: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 255]
+      }
+    },
+    email_id: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -30,13 +37,6 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 255]
-      }
-    },
-    email: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
