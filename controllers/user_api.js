@@ -14,11 +14,16 @@ app.post("/api/signin",(req,res) => {
        });
 }) 
 
-    app.post("/api/users", (req, res) => {
+    app.post("/api/signup", (req, res) => {
         db.users.create({
-            name: req.body.name
-        }).then(function (dbPost) {
-            res.json(dbPost);
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            mob_no: req.body.mob_no,
+            email_id: req.body.email_id,
+            username: req.body.username,
+            password: req.body.password
+        }).then(function (dbUsers) {
+            res.json(dbUsers);
         });
     });
 

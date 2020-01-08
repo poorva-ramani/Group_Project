@@ -35,8 +35,39 @@ $(function () {
       location.href = "/profile";
   });
 
-  $('#btn-signup').click(function(event){
+  $('#link-signup').click(function(event){
     event.preventDefault();
       location.href = "/signup";
+  });
+
+  $('#btn-signup').click(function(event){
+    event.preventDefault();
+      var firstname = $('#firstname').val().trim();
+      var lastname = $('#lastname').val().trim();
+      var mob_no = $('#mob_no').val().trim();
+      var email_id = $('#email_id').val().trim();
+      var username = $('#username').val().trim();
+      var password = $('#password').val().trim();
+
+      $.ajax("/api/signup", {
+          type: "POST",
+          data: { 
+            'firstname': firstname,
+            'lastname': lastname,
+            'mob_no': mob_no,
+            'email_id': email_id,
+            'username': username,
+            'password': password,         
+        }
+      }).then(
+          function (user) {
+            console.log(user)
+            if(user!=null){
+              location.href = "/dashboard";
+            }else{
+              alert("fields are empty");
+            }
+          }
+      );
   });
 });
