@@ -21,7 +21,11 @@ module.exports = function (app) {
    app.get("/profile", (req, res) =>
        res.render("profile")
    );
+   app.get("/calender", (req, res) =>
+    res.render("calender")
+    );
 };
+
 
 
 // //---------------------------------------------signup page call------------------------------------------------------
