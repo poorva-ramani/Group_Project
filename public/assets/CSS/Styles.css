@@ -1,11 +1,21 @@
-body {
-  background-image: url(https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80);
-}
-
-.title {
+.page-title {
   text-align: center;
   font-family: "Fugaz One", cursive;
+  color: orange;
 }
+
+.panel-title {
+  font-size: 20px;
+}
+
+.backSplashindex {
+  background-color:#D7EAED;
+}
+
+/* .title {
+  text-align: center;
+  font-family: "Fugaz One", cursive;
+} */
 
 .jumbotron {
   text-align: center;
@@ -29,11 +39,11 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-  
-    .sidenav a {
-      font-size: 18px;
-    }
+  .sidenav {
+    padding-top: 15px;
   }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
