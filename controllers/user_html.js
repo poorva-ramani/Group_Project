@@ -6,8 +6,8 @@ module.exports = function (app) {
        res.render("index")
    );
 
-   app.get("/dashboard", (req, res) =>
-       res.render("schedule")
+   app.get("/homepage", (req, res) =>
+       res.render("homepage")
    );
 
    app.get("/signup", (req, res) =>
@@ -21,9 +21,11 @@ module.exports = function (app) {
    app.get("/profile", (req, res) =>
        res.render("profile")
    );
-   app.get("/calender", (req, res) =>
-    res.render("calender")
-    );
+
+   app.get("/team", (req, res) =>
+       res.render("team")
+   );
+
 };
 
 
