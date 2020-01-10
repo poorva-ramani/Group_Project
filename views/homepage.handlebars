@@ -14,15 +14,39 @@
 
 <body>
   {{!-- Note for Ana - move this to Nav Bar --}}
-
-  <p>
-    <a class="btn btn-lg btn-primary" role="button" id="btn-profile">Profile view »</a>
-  </p>
+  <div class="container bckGrdHome">
   </div>
-  <button type="button" id="team-details">Team Details</button>
 
-  <!-- Create a button and give it an ID that we'll reference later -->
-  <button type="button" id="schedule-editor">Open Schedule Editor</button>
+  <div class="container dash">
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="card col-6 col-md-4" style="background-color:#D7EAED;">
+        <img src="public/assets/images/friends.jpg" class="card-img-top" alt="team">
+        <div class="card-body">
+          <h3 class="card-title"> Game Team</h3>
+          <br />
+          <p class="card-text">Find out what team member preferences, games owned, and food specifications.</p>
+          <button type="button" id="team-details" class="btn-sm btn-outline-secondary">Get Team Details</button>
+        </div>
+      </div>
+      <div class="col-4 col-md-2"></div>
+      <div class="card col-6 col-md-4" style="background-color: #D7EAED;">
+        <img src="public/assets/images/gameTime.jpeg" class="card-img-top" alt="gameTime">
+        <div class="card-body">
+          <h3 class="card-title">Game Time</h3>
+          <p class="card-text"> Schedule a game and invite the team. Don't forget to say what you will bring!</p>
+          <br />
+          <button type="button" id="schedule-editor" class="btn-sm btn-outline-secondary">Open Schedule
+            Editor</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  </div>
   <script>
     var btn = document.getElementById('schedule-editor');
     btn.addEventListener('click', function () {
