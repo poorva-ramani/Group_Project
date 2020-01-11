@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/poorva-ramani/Group_Project2#readme",
   "dependencies": {
+    "atom": "^1.1.0",
     "body-parser": "^1.16.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
