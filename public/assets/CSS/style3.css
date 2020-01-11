@@ -1,3 +1,5 @@
+/* controls sign up page */
+
 .control-label {
   color: #9cc6cd;
   font-family: "Fugaz One", cursive;
@@ -10,3 +12,18 @@
 .sign-title {
   font-size: 22px;
 }
+
+/* controls profile page */
+.profile-section {
+  background-color: #e0be8e;
+  padding-top: 20px;
+}
+
+.entry {
+  font-family: "Fugaz One", cursive;
+}
+
+/* Space around  */
+/* form box .row {
+  background-image: url("https://images.unsplash.com/photo-1547638375-ebf04735d792?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+} */
