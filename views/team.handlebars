@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div class="container">
+    <div class="row bg-danger text-white text-center p-4">
+        <div class="col ">
+            <h1>My Team</h1>
+        </div>
+    </div>
+    <div class="row p-4">
+        {{#each users}}
+        <div class="col-4">
+            <div class="card bg-primary mb-3" style="max-width: 25rem;">
+                <div class="card-header text-white">
+                    <h5 class="card-title">{{this.username}}</h5>
+                    <h5 class="card-subtitle">{{this.firstname}} {{this.lastname}}</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <div class="bg-white m-3 text-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><h6>Favourite Games:</h6>{{this.favorite_games}}</li>
+                            <li class="list-group-item"><h6>Food Allergies:</h6>{{this.food_allergies}}</li>
+                            <li class="list-group-item"><h6>Drink Preferences:</h6>{{this.drink_preferences}}</li>
+                            <li class="list-group-item"><h6>Board Games Owed:</h6>{{this.board_games_owned}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

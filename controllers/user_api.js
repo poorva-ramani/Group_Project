@@ -2,17 +2,18 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-app.post("/api/signin",(req,res) => {
-   console.log(req.body)
-   db.users.findOne({
-         where: {username: req.body.username,
-            password: req.body.password
-         }
-      })
-      .then(function(dbUsers) {
-         res.json(dbUsers);
-       });
-}) 
+    app.post("/api/signin", (req, res) => {
+        console.log(req.body)
+        db.users.findOne({
+            where: {
+                username: req.body.username,
+                password: req.body.password
+            }
+        })
+            .then(function (dbUsers) {
+                res.json(dbUsers);
+            });
+    })
 
     app.post("/api/signup", (req, res) => {
         db.users.create({
@@ -30,5 +31,27 @@ app.post("/api/signin",(req,res) => {
             res.json(dbUsers);
         });
     });
+
+    app.get("/profile", function (req, res) {
+        //  app.get("/:id", function(req, res) {
+        db.users.findOne({
+            where: {
+                username: "test",
+                password: "123"
+            }
+        }).then(function (data) {
+            res.render("profile", data.dataValues);
+        })
+    });
+
+    app.get("/team", function (req, res) {
+        //  app.get("/:id", function(req, res) {
+        db.users.findAll({})
+            .then(function (data) {
+                console.log({ users: data });
+                res.render("team", { users: data });
+            })
+    });
+
 
 };
