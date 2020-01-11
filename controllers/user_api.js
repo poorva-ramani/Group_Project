@@ -21,7 +21,11 @@ app.post("/api/signin",(req,res) => {
             mob_no: req.body.mob_no,
             email_id: req.body.email_id,
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            favorite_games: req.body.favorite_games,
+            food_allergies: req.body.food_allergies,
+            drink_preferences: req.body.drink_preferences,
+            board_games_owned: req.body.board_games_owned
         }).then(function (dbUsers) {
             res.json(dbUsers);
         });

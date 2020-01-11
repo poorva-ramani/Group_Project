@@ -29,6 +29,22 @@ module.exports = function (sequelize, DataTypes) {
         len: [1, 255]
       }
     },
+    food_allergies: {
+      type: DataTypes.STRING,
+      defaultValue: "N/A"
+    },
+    favorite_games: {
+      type: DataTypes.STRING,
+      defaultValue: "N/A"
+    },
+    drink_preferences: {
+      type: DataTypes.STRING,
+      defaultValue: "N/A"
+    },
+    board_games_owned: {
+      type: DataTypes.STRING,
+      defaultValue: "N/A"
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -48,6 +64,10 @@ module.exports = function (sequelize, DataTypes) {
     //   allowNull: false,
     //   defaultValue: false
     // }
+    
+
+
+
   }, {
     timestamps: false
   });
