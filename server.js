@@ -1,31 +1,31 @@
 /**
 * Module dependencies.
 */
-var express = require('express')
-  , path = require('path');
-//var methodOverride = require('method-override');
+var express = require('express');
 var session = require('express-session');
 var exphbs = require("express-handlebars");
 var app = express();
 var bodyParser=require("body-parser");
 var PORT = process.env.PORT || 3000;
 var db = require("./models");
+var passport = require("./config/passport");
+
 
 //global.db = connection;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"))
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
               secret: 'keyboard cat',
-              resave: false,
+              resave: true,
               saveUninitialized: true,
               cookie: { maxAge: 60000 }
             }));
-
-// Parse application body
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+            app.use(passport.initialize());
+            app.use(passport.session());
 
 //Handlebars setup
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));

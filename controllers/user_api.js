@@ -1,18 +1,19 @@
 var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function (app) {
-
-    app.post("/api/signin", (req, res) => {
-        console.log(req.body)
-        db.users.findOne({
-            where: {
-                username: req.body.username,
-                password: req.body.password
-            }
-        })
-            .then(function (dbUsers) {
-                res.json(dbUsers);
-            });
+    app.post("/api/signin", passport.authenticate("local"), (req, res) => {
+        res.redirect("/homepage");
+        // db.users.findOne({
+        //     where: {
+        //         username: req.body.username,
+        //         password: req.body.password
+        //     }
+        // })
+        //     .then(function (dbUsers) {
+        //         res.json("/homepage");
+        //         // res.render("homepage")
+        //     });
     })
 
     app.post("/api/signup", (req, res) => {
@@ -30,18 +31,6 @@ module.exports = function (app) {
         }).then(function (dbUsers) {
             res.json(dbUsers);
         });
-    });
-
-    app.get("/profile", function (req, res) {
-        //  app.get("/:id", function(req, res) {
-        db.users.findOne({
-            where: {
-                username: "test",
-                password: "123"
-            }
-        }).then(function (data) {
-            res.render("profile", data.dataValues);
-        })
     });
 
     app.get("/team", function (req, res) {

@@ -1,30 +1,49 @@
 var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
 
-   app.get("/", (req, res) =>
-       res.render("index")
-   );
+    app.get("/", function (req, res) {
+        if (req.user) {
+            res.redirect("/homepage");
+        }
+        res.redirect("/login");
+    });
 
-   app.get("/homepage", (req, res) =>
-       res.render("homepage")
-   );
+    app.get("/login", function (req, res) {
+        if (req.user) {
+            res.redirect("/homepage");
+        }
+        res.render("index")
+    });
 
-   app.get("/signup", (req, res) =>
-       res.render("signup")
-   );
+    app.get("/homepage", function (req, res) {
+        console.log("Logged In User:")
+        res.render("homepage")
+    });
 
-   app.get("/logout", (req, res) =>
-       res.render("index")
-   );
+    app.get("/signup", (req, res) =>
+        res.render("signup")
+    );
 
-   app.get("/profile", (req, res) =>
-       res.render("profile")
-   );
+    app.get("/logout", function(req, res) {
+        req.logout();
+        res.redirect("/");
+    });
 
-   app.get("/team", (req, res) =>
-       res.render("team")
-   );
+    app.get("/profile", function(req, res) {
+    if (!req.user) {
+        // The user is not logged in, send back an empty object
+        res.redirect("/login");    
+     } else {
+          console.log("Here2" + req.user)
+    res.render("profile",req.user);
+      }
+    });
+
+    app.get("/team", (req, res) =>
+        res.render("team")
+    );
 
 };
 
@@ -53,7 +72,7 @@ module.exports = function (app) {
 //       res.render('signup');
 //    }
 // };
- 
+
 // //-----------------------------------------------login page call------------------------------------------------------
 // exports.login = function(req, res){
 //    var message = '';
@@ -63,7 +82,7 @@ module.exports = function (app) {
 //       var post  = req.body;
 //       var name= post.user_name;
 //       var pass= post.password;
-     
+
 //       var sql="SELECT id, first_name, last_name, user_name FROM `users` WHERE `user_name`='"+name+"' and password = '"+pass+"'";                           
 //       db.query(sql, function(err, results){      
 //          if(results.length){
@@ -82,7 +101,7 @@ module.exports = function (app) {
 //    }          
 // };
 // //-----------------------------------------------dashboard page functionality----------------------------------------------
-           
+
 // exports.dashboard = function(req, res, next){     
 //    var user =  req.session.user,
 //    userId = req.session.userId;
