@@ -83,11 +83,8 @@ $(function () {
       }
     }).then(
       function (user) {
-        if (user != null) {
-          location.href = "/homepage";
-        } else {
-          alert("fields are empty");
-        }
+          location.href = "/login";
+          alert("Registration successful. Please login with your new username! ")
       });
   });
 
