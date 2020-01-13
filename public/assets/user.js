@@ -1,25 +1,24 @@
 $(function () {
-
   $('#btn-login').click(function (event) {
     event.preventDefault();
     var username = $('#login-username').val().trim();
     var password = $('#login-password').val().trim();
 
+    if (username === "" || password === "") {
+      return alert("Please enter valid username and password");
+    }
+  
     $.ajax("/api/signin", {
       type: "POST",
       data: {
         username: username,
         password: password
       }
-    }).then(function (user) {
-        console.log("Login")
-        if (user != null) {
-          location.href = "/homepage";
-          window.location.replace(user);
-        } else {
-          alert("User and password are invalid");
-        }
-      });   
+    }).then(function (data) {
+      location.href = "/homepage";
+      window.location.replace(data);
+    });
+
     $('#login-username').val("");
     $('#login-password').val("");
   });
@@ -31,15 +30,17 @@ $(function () {
 
   $('#btn-home').click(function (event) {
     event.preventDefault();
+    console.log("btn homepage")
     location.href = "/homepage";
+    window.location.replace(data);
   });
 
   $('#btn-profile').click(function (event) {
     event.preventDefault();
-    $.get("/api/profile").then(function(data) {
-    location.href = "/profile";
-    window.location.replace(data);
-  });
+    $.get("/api/profile").then(function (data) {
+      location.href = "/profile";
+      window.location.replace(data);
+    });
   });
 
   $('#link-signup').click(function (event) {

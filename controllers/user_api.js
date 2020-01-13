@@ -3,6 +3,9 @@ var passport = require("../config/passport");
 
 module.exports = function (app) {
     app.post("/api/signin", passport.authenticate("local"), (req, res) => {
+        console.log("I am here")
+        console.log(req.body);
+        console.log(res.body);
         res.redirect("/homepage");
         // db.users.findOne({
         //     where: {
@@ -37,7 +40,6 @@ module.exports = function (app) {
         //  app.get("/:id", function(req, res) {
         db.users.findAll({})
             .then(function (data) {
-                console.log({ users: data });
                 res.render("team", { users: data });
             })
     });

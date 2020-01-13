@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nylas Scheduler Simple Example</title>
-
   <!-- Import the Nylas Schedule Editor script -->
   <script src="https://schedule.nylas.com/schedule-editor/v1.0/schedule-editor.js" type="text/javascript"></script>
   <script src="../controllers/schedule_controller.js" type="text/javascript"></script>
 </head>
 
-
 <body>
   {{!-- Note for Ana - move this to Nav Bar --}}
   <div class="container bckGrdHome">
   </div>
-
   <div class="container dash">
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="card-title">
+      <h3> Welcome {{this.firstname}} {{this.lastname}} !!!</h3>
+      </h4>Let's schedule the game night ! </h4>
+    </div>
     <div class="row">
-      <div class="card col-6 col-md-4" style="background-color:#D7EAED;">
+      <div class="card col-md-5" style="background-color:#D7EAED;">
         <img
           src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
           class="card-img-top" alt="team" style="padding-top: 20px;">
@@ -31,26 +26,20 @@
           <button type="button" id="team-details" class="btn-sm btn-outline-secondary">Get Team Details</button>
         </div>
       </div>
-      <div class="col-4 col-md-2"></div>
-      <div class="card col-6 col-md-4" style="background-color: #D7EAED;">
+      <div class="col-md-2"></div>
+      <div class="card col-md-5" style="background-color: #D7EAED;">
         <img
           src="https://images.unsplash.com/photo-1515334651527-87d92cb011ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-          class="card-img-top" alt="gameTime" style="padding-top: 20px;>
+          class="card-img-top" alt="gameTime" style="padding-top: 20px;">
         <div class=" card-body">
-        <h3 class="card-title"> Game Time</h3>
-        <br />
-        <p class="card-text"> Schedule a game and invite the team. Don't forget to say what you will bring!</p>
-        <br />
-        <button type="button" id="schedule-editor" class="btn-sm btn-outline-secondary">Open Schedule
-          Editor</button>
-
+          <h3 class="card-title"> Game Time</h3>
+          <p class="card-text"> Schedule a game and invite the team. Don't forget to say what you will bring!</p>
+          <br />
+          <button type="button" id="schedule-editor" class="btn-sm btn-outline-secondary">Open Schedule
+            Editor</button>
+        </div>
       </div>
     </div>
-
-  </div>
-
-  </div>
-  </div>
   </div>
   <script>
     var btn = document.getElementById('schedule-editor');
@@ -77,5 +66,3 @@
   </script>
 
 </body>
-
-</html>

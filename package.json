@@ -19,18 +19,19 @@
   },
   "homepage": "https://github.com/poorva-ramani/Group_Project2#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.16.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.15.1",
+    "express-validator": "^6.3.1",
     "mysql": "^2.17.1",
     "mysql2": "^2.1.0",
     "nylas": "^4.8.0",
     "passport": "^0.4.1",
     "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
     "req-flash": "0.0.3",
-    "sequelize": "^5.21.3",
-    "bcrypt-nodejs": "0.0.3",
-    "passport-local": "^1.0.0"
+    "sequelize": "^5.21.3"
   }
 }

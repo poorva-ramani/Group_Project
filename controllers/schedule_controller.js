@@ -14,25 +14,25 @@
 //   auth_url = Nylas.urlForAuthentication(options);
 
 
-// const Nylas = require('nylas');
+const Nylas = require('nylas');
 
-// Nylas.config({
-//   clientId: "99ll6szal2clc37scmkxnuinb" ,
-//   clientSecret: "2wb5qxy4rwmvsocl329twjsks",
-// });
+Nylas.config({
+  clientId: "99ll6szal2clc37scmkxnuinb" ,
+  clientSecret: "2wb5qxy4rwmvsocl329twjsks",
+});
 
-// const nylas = Nylas.with('fUZmfBYSvID7PrB6X79Ea9ejv6Z0Eh');
+const nylas = Nylas.with('fUZmfBYSvID7PrB6X79Ea9ejv6Z0Eh');
 
-// Nylas.accounts.list().then(accounts => {
-//     for (let account of accounts) {
-//       console.log(
-//         `Email: ${account.emailAddress} | `,
-//         `Billing State: ${account.billingState} | `,
-//         `Sync State: ${account.syncState}`,
-//         `ID: ${account.id} | `
-//       );
-//     }
-//   });
+Nylas.accounts.list().then(accounts => {
+    for (let account of accounts) {
+      console.log(
+        `Email: ${account.emailAddress} | `,
+        `Billing State: ${account.billingState} | `,
+        `Sync State: ${account.syncState}`,
+        `ID: ${account.id} | `
+      );
+    }
+  });
 
 
 
