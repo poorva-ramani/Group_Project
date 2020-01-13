@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/poorva-ramani/Group_Project2.git"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
