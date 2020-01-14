@@ -40,6 +40,8 @@ module.exports = function (app) {
         //  app.get("/:id", function(req, res) {
         db.users.findAll({})
             .then(function (data) {
+                console.log("Julien Baker, get out of my head")
+                console.log(data)
                 res.render("team", { users: data });
             })
     });
