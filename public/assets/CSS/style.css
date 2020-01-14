@@ -8,8 +8,13 @@
   font-size: 20px;
 }
 
-.backSplashindex {
-  background-color:#D7EAED;
+#loginbox {
+  background-color:rgb(232, 249, 252);
+  width: 700px;
+  height : 500px;
+  margin: auto;
+  padding:30px;
+  top: -50px;
 }
 
 /* .title {
@@ -17,13 +22,13 @@
   font-family: "Fugaz One", cursive;
 } */
 
-.jumbotron {
+/* .jumbotron {
   text-align: center;
   margin-left: 430px;
   margin-right: 430px;
 
   background-color: #9cc6cd;
-}
+} */
 
 /* tried this to move the PW and User name input to center but this is not working also tried text align center also not working
 .username .password {
@@ -47,3 +52,9 @@
     font-size: 18px;
   }
 }
+/* 
+@media  screen and (min-width: 900px){
+.container {
+    width: 70%;
+}
+} */
